@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Losing Jobs to Competitors - Professional Landing Pages for Local Service Businesses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .hero .highlight {
+            color: #ff6b35;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-primary {
+            background: #ff6b35;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #ffffff;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-secondary:hover {
+            background: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            background: #1a1a1a;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .pain-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ff6b35;
+            font-weight: 900;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .pain-card {
+            background: #2d2d2d;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid #ff6b35;
+            transition: transform 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pain-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .pain-card p {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        .pain-callout {
+            text-align: center;
+            background: #ff6b35;
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .pain-callout h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            background: #0f0f0f;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .solution-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .solution-intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: #1a1a1a;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .pricing-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .pricing-card {
+            background: #2d2d2d;
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff6b35;
+        }
+
+        .pricing-card.featured {
+            border-color: #ff6b35;
+            background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
+        }
+
+        .pricing-card.featured::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b35;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .pricing-card .price {
+            font-size: 3rem;
+            color: #ff6b35;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .roi {
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            margin-bottom: 15px;
+            color: #cccccc;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .pricing-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: #0f0f0f;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .benefits-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .benefit-icon {
+            font-size: 4rem;
+            color: #ff6b35;
+            margin-bottom: 20px;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .benefit-item p {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        /* How It Works Section */
+        .process-section {
+            background: #1a1a1a;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .process-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: #ff6b35;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .step p {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #0f0f0f;
+            padding: 80px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .testimonials-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial {
+            background: #2d2d2d;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid #ff6b35;
+        }
+
+        .testimonial p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial .author {
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-primary {
+            background: #ffffff;
+            color: #ff6b35;
+            font-size: 1.4rem;
+            padding: 25px 50px;
+        }
+
+        .final-cta .cta-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-primary, .cta-secondary {
+                display: block;
+                margin: 10px auto;
+                max-width: 300px;
+            }
+
+            .pain-section h2,
+            .solution-section h2,
+            .pricing-section h2,
+            .benefits-section h2,
+            .process-section h2,
+            .testimonials-section h2,
+            .final-cta h2 {
+                font-size: 2.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Stop Losing Jobs to <span class="highlight">Competitors</span></h1>
+            <p>Get a professional landing page that turns your ads into booked jobs. One new customer pays for the entire page.</p>
+            <div>
+                <a href="#pricing" class="cta-primary">Choose Your Template</a>
+                <a href="#contact" class="cta-secondary">Book Free Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <div class="container">
+            <h2>Every Day You Wait = Money Lost</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>📞 Your Phone Isn't Ringing</h3>
+                    <p>You're spending money on ads, but customers click and leave. Your current website looks unprofessional compared to competitors, so they call someone else instead.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>💸 Wasted Ad Spend</h3>
+                    <p>Every click that doesn't convert is money down the drain. Your ads bring traffic, but your website doesn't turn visitors into paying customers who actually call you.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>🏆 Losing to Competition</h3>
+                    <p>Customers choose whoever looks most professional online. While you're the better contractor, they're winning jobs because their landing page builds trust instantly.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>⏰ No Time for Tech Stuff</h3>
+                    <p>You're busy running jobs, not learning web design. You need something that works immediately, not another project that takes weeks to figure out.</p>
+                </div>
+            </div>
+            <div class="pain-callout">
+                <h3>How much is each lost job costing you?</h3>
+                <p>If you're losing just ONE job per week to competitors with better websites, that's thousands in lost revenue every month.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2>The Solution: Professional Landing Pages That Get You Jobs</h2>
+            <p class="solution-intro">
+                Stop losing customers to competitors. Our landing pages are designed specifically for local service businesses like yours. 
+                They build trust instantly, capture leads effectively, and get your phone ringing with new jobs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2>Choose Your Landing Page Solution</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Template</h3>
+                    <div class="price">$297</div>
+                    <p class="roi">One new job pays for this</p>
+                    <ul>
+                        <li>Professional pre-made template</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Contact form included</li>
+                        <li>Fast 48-hour setup</li>
+                        <li>Perfect for getting started</li>
+                        <li>Basic SEO optimization</li>
+                    </ul>
+                    <a href="#contact" class="cta-primary">Get Basic Template</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Professional Template</h3>
+                    <div class="price">$597</div>
+                    <p class="roi">One medium job covers this</p>
+                    <ul>
+                        <li>Conversion-optimized design</li>
+                        <li>Trust badges & credibility elements</li>
+                        <li>Advanced contact forms</li>
+                        <li>Click-to-call buttons</li>
+                        <li>Service area targeting</li>
+                        <li>Professional copywriting</li>
+                        <li>Advanced SEO optimization</li>
+                        <li>24-hour setup</li>
+                    </ul>
+                    <a href="#contact" class="cta-primary">Get Professional Template</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Custom Landing Page</h3>
+                    <div class="price">$1,497</div>
+                    <p class="roi">One big job more than covers this</p>
+                    <ul>
+                        <li>100% custom design for your business</li>
+                        <li>Unique branding & messaging</li>
+                        <li>Custom photography integration</li>
+                        <li>Advanced conversion features</li>
+                        <li>Competitor analysis included</li>
+                        <li>Professional copywriter</li>
+                        <li>Priority support</li>
+                        <li>7-day delivery</li>
+                    </ul>
+                    <a href="#contact" class="cta-primary">Get Custom Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>What You Get With Every Landing Page</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">📞</div>
+                    <h3>More Phone Calls</h3>
+                    <p>Turn website visitors into customers who actually call you for jobs</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Higher Conversion</h3>
+                    <p>Get more jobs from the same ad spend with pages designed to convert</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Beat Competition</h3>
+                    <p>Look more professional than competitors and win more jobs</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Setup</h3>
+                    <p>No tech headaches - we handle everything and get you live quickly</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Perfect on phones since most customers search on mobile</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Built for Service Businesses</h3>
+                    <p>Designed specifically for contractors and local service providers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Template</h3>
+                    <p>Pick the option that fits your business and budget</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Customize It</h3>
+                    <p>Add your business info, photos, and contact details</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Go Live Fast</h3>
+                    <p>Your professional landing page goes live in days, not weeks</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get More Jobs</h3>
+                    <p>Watch your phone ring with new customers ready to hire you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Local Service Business Owners Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Within 2 weeks of launching our new landing page, we booked 3 new roofing jobs worth over $15,000. This thing paid for itself 10 times over."</p>
+                    <div class="author">- Mike R., Roofing Contractor</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I was losing customers to competitors who looked more professional online. Now MY phone rings first. Best investment I've made for my plumbing business."</p>
+                    <div class="author">- Sarah T., Plumbing Services</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Finally, a website that actually gets me jobs instead of just sitting there. The phone hasn't stopped ringing since we went live."</p>
+                    <div class="author">- Carlos M., HVAC Contractor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Stop Losing Jobs to Competitors Today</h2>
+            <p>Every day you wait is money in your competitor's pocket. Get a professional landing page that gets your phone ringing with new jobs. One new customer easily pays for the entire page.</p>
+            <a href="mailto:contact@yourlandingpages.com?subject=Landing%20Page%20Quote" class="cta-primary">Get Your Landing Page Now</a>
+        </div>
+    </section>
+</body>
+</html>
